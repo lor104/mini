@@ -29,18 +29,63 @@ $(document).ready(function(){
         var h3 = document.createElement("h3");
         h3.className = `cars${i} `;
         h3.className += "Name";
-        console.log(h3)
         var divContainer = document.getElementById(`ad${i}`)
-        console.log(divContainer)
         divContainer.appendChild(h3);
 
         var pPrice = document.createElement("p");
         pPrice.className = `cars${i} `;
         pPrice.className += "Price";
-        console.log(pPrice)
-        // var divContainer = document.getElementById(`ad${i}`)
-        console.log(divContainer)
         divContainer.appendChild(pPrice);
+
+        var imgPhoto = document.createElement("img");
+        imgPhoto.className = `cars${i} `;
+        imgPhoto.className += "Photo";
+        divContainer.appendChild(imgPhoto);
+
+        var pRetailer = document.createElement("p");
+        pRetailer.className = `cars${i} `;
+        pRetailer.className += "Retailer";
+        divContainer.appendChild(pRetailer);
+
+        var pKilometres = document.createElement("p");
+        pKilometres.className = `cars${i} `;
+        pKilometres.className += "Kilometres";
+        divContainer.appendChild(pKilometres);
+
+        var pTransmission = document.createElement("p");
+        pTransmission.className = `cars${i} `;
+        pTransmission.className += "Transmission";
+        divContainer.appendChild(pTransmission);
+
+        var pExterior = document.createElement("p");
+        pExterior.className = `cars${i} `;
+        pExterior.className += "Exterior";
+        divContainer.appendChild(pExterior);
+
+        var pInterior = document.createElement("p");
+        pInterior.className = `cars${i} `;
+        pInterior.className += "Interior";
+        divContainer.appendChild(pInterior);
+
+        var pVIN = document.createElement("p");
+        pVIN.className = `cars${i} `;
+        pVIN.className += "VIN";
+        divContainer.appendChild(pVIN);
+
+        var pDriveTrain = document.createElement("p");
+        pDriveTrain.className = `cars${i} `;
+        pDriveTrain.className += "DriveTrain";
+        divContainer.appendChild(pDriveTrain);
+
+        var aDetails = document.createElement("a");
+        aDetails.className = `cars${i} `;
+        aDetails.className += "details";
+        divContainer.appendChild(aDetails);
+
+        var aTestDrive = document.createElement("a");
+        aTestDrive.className = `cars${i} `;
+        aTestDrive.className += "testDrive";
+        divContainer.appendChild(aTestDrive);
 
 
         //the loop that otherwise appends all data to the elements set up with the first loop
