@@ -91,6 +91,18 @@ $(document).ready(function(){
         //the loop that otherwise appends all data to the elements set up with the first loop
         for (n = 0; n < keys.length; n++) {
 
+          if (keys[n] === "Name") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.innerHTML += `${cars[i][keys[n]]}`;
+          }
+
+          if (keys[n] === "Price") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.innerHTML += `${cars[i][keys[n]]}`;
+          }
+
           //check to see the key/value pairs iterate properly
           // console.log(keys[n] + ": " + cars[i][keys[n]]);
 
