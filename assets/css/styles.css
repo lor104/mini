@@ -27,12 +27,24 @@
 }
 
 
+
+/*======================================*/
 /*default styles*/
+
 * {
   font-family: miniSerif, serif;
+  font-size: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
 }
 
-img {
+h1 {font-size: 3.75em;}
+h2 {font-size: 1.3em;}
+h3 {font-size: 1.8em;}
+h4 {font-size: 1.25em;}
+
+img.Photo {
   width: 300px;
 }
 a {
@@ -41,13 +53,19 @@ a {
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 15px 33px;
+  width: 150px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  margin: 15px 0;
 }
 
 body {
   height: 100%;
 }
 
-#containerAds h3 {
+#containerAds h4 {
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: bold;
@@ -62,8 +80,28 @@ p span {
 }
 
 /*======================================*/
-
 /*individual styles*/
+div.header {
+  text-align: center;
+}
+div.header h1 {
+  margin-top: 0;
+}
+div.header h2 {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+#countryman {
+
+}
+div.countryman.text {
+
+}
+img.countryman {
+
+  max-width: 50%;
+}
 
 div#embeddedVideo {
   display: flex;
@@ -99,7 +137,6 @@ iframe {
   transform: scale(1.2) rotate(360deg);
   transition: transform 0.5s ease-in-out;
 }
-
 
 /*======================================*/
 /*set breakpoints */

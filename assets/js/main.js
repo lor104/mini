@@ -40,11 +40,11 @@ $(document).ready(function(){
         var container = document.getElementById("containerAds");
         container.appendChild(div);
 
-        var h3 = document.createElement("h3");
-        h3.className = `cars${i} `;
-        h3.className += "Name";
+        var h4 = document.createElement("h4");
+        h4.className = `cars${i} `;
+        h4.className += "Name";
         var divContainer = document.getElementById(`ad${i}`)
-        divContainer.appendChild(h3);
+        divContainer.appendChild(h4);
 
         var pPrice = document.createElement("p");
         pPrice.className = `cars${i} `;
