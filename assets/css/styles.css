@@ -1,6 +1,52 @@
+
+/*default styles*/
+
 img {
   width: 300px;
 }
 a {
   display: block;
+}
+
+body {
+  height: 100%;
+}
+
+/*======================================*/
+
+/*individual styles*/
+
+div#embeddedVideo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  align-content: center;
+
+  position: relative;
+  height: 100%;
+  z-index:10;
+}
+
+iframe {
+  flex: 1;
+  z-index: -1;
+  padding: 0;
+  width: 800px;
+  height: 448px;
+
+}
+
+#playVideo {
+  width: 90px;
+  position: absolute;
+  top: calc(224px - 45px);
+  transition: transform 0.5s;
+  transform-origin: center;
+}
+#playVideo:hover {
+  cursor: pointer;
+  transform: scale(1.2) rotate(360deg);
+  transition: transform 0.5s ease-in-out;
 }

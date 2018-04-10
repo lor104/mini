@@ -6,6 +6,20 @@
 
 $(document).ready(function(){
 
+  //play button overlay when clicked plays video and then disappears
+  var playButton = document.getElementById("playVideo")
+  playButton.addEventListener("click", function(e) {
+    e.preventDefault;
+    var video = document.getElementsByClassName("ytvideo");
+    video[0].src += "&autoplay=1";
+
+    playButton.style.transition += "opacity 1.4s";
+    playButton.style.opacity = "0";
+    setTimeout(function(){playButton.style.display = "none"},1400);
+  })
+
+
+//load json file through ajax and implement into html
   $.ajax({
     url: "https://raw.githubusercontent.com/lor104/mini/master/assets/json/test.json", // path to file
     dataType: 'json',
