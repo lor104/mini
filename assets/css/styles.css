@@ -34,7 +34,7 @@ iframe {
   z-index: -1;
   padding: 0;
   width: 800px;
-  height: 448px;
+  height: calc(800 * 0.5625px);
 
 }
 
@@ -49,4 +49,28 @@ iframe {
   cursor: pointer;
   transform: scale(1.2) rotate(360deg);
   transition: transform 0.5s ease-in-out;
+}
+
+
+/*======================================*/
+/*set breakpoints */
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* Tablets (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
 }
