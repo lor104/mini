@@ -21,10 +21,21 @@ $(document).ready(function(){
 
         //create divs for each individual ad
         var div = document.createElement("div");
-        div.className = "ad"
-        console.log(div.className)
-        var element = document.getElementById('containerAds');
-        element.appendChild(div);
+        div.id = "ad" + i;
+        // console.log(div.className)
+        var container = document.getElementById("containerAds");
+        container.appendChild(div);
+
+        var h3 = document.createElement("h3");
+        h3.className = "Name ";
+        h3.className += `cars${i}`;
+        console.log(h3)
+        var divContainer = document.getElementById(`ad${i}`)
+        console.log(divContainer)
+        divContainer.appendChild(h3);
+
+
+
 
         //the loop that otherwise appends all data to the elements set up with the first loop
         for (n = 0; n < keys.length; n++) {
