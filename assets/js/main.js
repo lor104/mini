@@ -27,14 +27,20 @@ $(document).ready(function(){
         container.appendChild(div);
 
         var h3 = document.createElement("h3");
-        h3.className = "Name ";
-        h3.className += `cars${i}`;
+        h3.className = `cars${i} `;
+        h3.className += "Name";
         console.log(h3)
         var divContainer = document.getElementById(`ad${i}`)
         console.log(divContainer)
         divContainer.appendChild(h3);
 
-
+        var pPrice = document.createElement("p");
+        pPrice.className = `cars${i} `;
+        pPrice.className += "Price";
+        console.log(pPrice)
+        // var divContainer = document.getElementById(`ad${i}`)
+        console.log(divContainer)
+        divContainer.appendChild(pPrice);
 
 
         //the loop that otherwise appends all data to the elements set up with the first loop
