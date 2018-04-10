@@ -8,13 +8,13 @@ $(document).ready(function(){
 
   $.ajax({
     url: "https://raw.githubusercontent.com/lor104/mini/master/assets/json/test.json", // path to file
-    dataType: 'json', // type of file (text, json, xml, etc)
+    dataType: 'json',
     success: function(data) { // callback for successful completion
       var cars = data;
 
       var keys = Object.keys(cars[0]);
-      console.log("cars: " + cars.length)
-      console.log("keys: " + keys.length)
+      // console.log("cars: " + cars.length) //check to see how many cars
+      // console.log("keys: " + keys.length) //check to see how many keys
 
       //the loop that will iterate as many times as there are cars
       for (i = 0; i < cars.length; i++) {
@@ -42,49 +42,57 @@ $(document).ready(function(){
         imgPhoto.className += "Photo";
         divContainer.appendChild(imgPhoto);
 
+        var pDetails = document.createElement("div")
+        pDetails.className = `cars${i} details`;
+        divContainer.appendChild(pDetails)
+
         var pRetailer = document.createElement("p");
         pRetailer.className = `cars${i} `;
         pRetailer.className += "Retailer";
-        divContainer.appendChild(pRetailer);
+        pDetails.appendChild(pRetailer);
 
         var pKilometres = document.createElement("p");
         pKilometres.className = `cars${i} `;
         pKilometres.className += "Kilometres";
-        divContainer.appendChild(pKilometres);
+        pDetails.appendChild(pKilometres);
 
         var pTransmission = document.createElement("p");
         pTransmission.className = `cars${i} `;
         pTransmission.className += "Transmission";
-        divContainer.appendChild(pTransmission);
+        pDetails.appendChild(pTransmission);
 
         var pExterior = document.createElement("p");
         pExterior.className = `cars${i} `;
         pExterior.className += "Exterior";
-        divContainer.appendChild(pExterior);
+        pDetails.appendChild(pExterior);
 
         var pInterior = document.createElement("p");
         pInterior.className = `cars${i} `;
         pInterior.className += "Interior";
-        divContainer.appendChild(pInterior);
+        pDetails.appendChild(pInterior);
 
         var pVIN = document.createElement("p");
         pVIN.className = `cars${i} `;
         pVIN.className += "VIN";
-        divContainer.appendChild(pVIN);
+        pDetails.appendChild(pVIN);
 
         var pDriveTrain = document.createElement("p");
         pDriveTrain.className = `cars${i} `;
         pDriveTrain.className += "DriveTrain";
-        divContainer.appendChild(pDriveTrain);
+        pDetails.appendChild(pDriveTrain);
 
         var aDetails = document.createElement("a");
         aDetails.className = `cars${i} `;
         aDetails.className += "details";
+        aDetails.innerHTML = "View Details";
+        aDetails.href = "#";
         divContainer.appendChild(aDetails);
 
         var aTestDrive = document.createElement("a");
         aTestDrive.className = `cars${i} `;
         aTestDrive.className += "testDrive";
+        aTestDrive.innerHTML = "Book a Test Drive";
+        aTestDrive.href = "#";
         divContainer.appendChild(aTestDrive);
 
 
@@ -107,6 +115,48 @@ $(document).ready(function(){
             var elementClass = `.cars${i}.${keys[n]}`
             var containerName = document.querySelector(elementClass)
             containerName.src += `${cars[i][keys[n]]}`;
+          }
+
+          else if (keys[n] === "Retailer") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+          }
+
+          else if (keys[n] === "Kilometres") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+          }
+
+          else if (keys[n] === "Transmission") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+          }
+
+          else if (keys[n] === "Exterior") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+          }
+
+          else if (keys[n] === "Interior") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+          }
+
+          else if (keys[n] === "VIN") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+          }
+
+          else if (keys[n] === "DriveTrain") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
           }
 
           //check to see the key/value pairs iterate properly
