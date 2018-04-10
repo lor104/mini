@@ -97,10 +97,16 @@ $(document).ready(function(){
             containerName.innerHTML += `${cars[i][keys[n]]}`;
           }
 
-          if (keys[n] === "Price") {
+          else if (keys[n] === "Price") {
             var elementClass = `.cars${i}.${keys[n]}`
             var containerName = document.querySelector(elementClass)
             containerName.innerHTML += `${cars[i][keys[n]]}`;
+          }
+
+          else if (keys[n] === "Photo") {
+            var elementClass = `.cars${i}.${keys[n]}`
+            var containerName = document.querySelector(elementClass)
+            containerName.src += `${cars[i][keys[n]]}`;
           }
 
           //check to see the key/value pairs iterate properly
