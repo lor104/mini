@@ -1,15 +1,64 @@
+/*add fonts*/
+@font-face {
+  font-family: miniSans;
+  src: url('../fonts/MINI-Sans/mini_sans-medium-webfont.woff')
+  format('woff');
+}
+
+@font-face {
+  font-family: miniSerif;
+  src: url('../fonts/MINI-Serif/mini_serif-regular-webfont.woff')
+  format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: miniSerif;
+  src: url('../fonts/MINI-Serif/mini_serif-bold-webfont.woff')
+  format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: miniSerif;
+  src: url('../fonts/MINI-Serif/mini_serif-italic-webfont.woff')
+  format('woff');
+  font-style: italic;
+}
+
 
 /*default styles*/
+* {
+  font-family: miniSerif, serif;
+}
 
 img {
   width: 300px;
 }
 a {
   display: block;
+  font-family: miniSans;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 body {
   height: 100%;
+}
+
+#containerAds h3 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.Price {
+  font-weight: bold;
+}
+
+p span {
+  font-weight: bold;
 }
 
 /*======================================*/
