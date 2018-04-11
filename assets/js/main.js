@@ -16,6 +16,16 @@ $(document).ready(function(){
     playButton.style.transition += "opacity 1.4s";
     playButton.style.opacity = "0";
     setTimeout(function(){playButton.style.display = "none"},1400);
+
+    var videoText = document.getElementById("videoText")
+    videoText.style.transition += "opacity 1.4s";
+    videoText.style.opacity = "0";
+    setTimeout(function(){videoText.style.display = "none"},1400);
+
+    var videoCover = document.getElementById("videoCover")
+    videoCover.style.transition += "opacity 1.4s";
+    videoCover.style.opacity = "0";
+    setTimeout(function(){videoCover.style.display = "none"},1400);
   })
 
 
