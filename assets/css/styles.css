@@ -59,6 +59,7 @@ a {
   color: white;
   background-color: black;
   margin: 15px 0;
+  box-sizing: content-box;
 }
 
 body {
@@ -92,16 +93,44 @@ div.header h2 {
   margin-bottom: 0;
 }
 
-#countryman {
+/*reorder elements within countryman within large layouts - set width*/
 
+#countryman {
+  max-width: 100%;
+  position: relative;
+}
+#countryman h3 {
+  margin-bottom: 0;
 }
 div.countryman.text {
-
+  order: -1;
+  max-width: 50%;
+  margin-left: 100px;
+  margin-right: 10px;
 }
 img.countryman {
+  order: 0;
+  max-width: 50%;
+  max-height: 100%;
+}
 
+/*set width for clubman elements*/
+#clubman {
+  max-width: 100%;
+  position: relative;
+}
+#clubman h3 {
+  margin-bottom: 0;
+}
+div.clubman.text {
+  max-width: 50%;
+  margin-left: 100px;
+  margin-right: 10px;
+}
+img.clubman {
   max-width: 50%;
 }
+
 
 div#embeddedVideo {
   display: flex;
@@ -112,7 +141,8 @@ div#embeddedVideo {
   align-content: center;
 
   position: relative;
-  height: 100%;
+  width: 100%;
+  height: calc(800 * 0.5625px);
   z-index:10;
 }
 
@@ -138,22 +168,81 @@ iframe {
   transition: transform 0.5s ease-in-out;
 }
 
+#containerAds {
+  flex-direction: row;
+  justify-content: space-around;
+}
+a.details, a.testDrive {
+  width: 80%;
+}
+
 /*======================================*/
 /*set breakpoints */
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 767px) {
+  /* Styles */
+    #containerAds {
+      flex-direction: column;
+      justify-content: center;
+    }
+    #countryman {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+    div.countryman.text {
+      order: -1;
+      max-width: 100%;
+      margin: auto 10px;
+    }
+    img.countryman {
+      order: 0;
+      max-width: 100%;
+    }
+    .countryman.links a {
+      width: 90%;
+    }
+    #clubman {
+      flex-direction: column;
+      width: 100%;
+    }
+    div.clubman.text {
+      max-width: 100%;
+      margin: auto 10px;
+    }
+    img.clubman {
+      order: 0;
+      max-width: 100%;
+    }
 }
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-}
-
 /* Tablets (portrait and landscape) ----------- */
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
-/* Styles */
+  /* Styles */
+  #countryman {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  div.countryman.text {
+    order: -1;
+    max-width: 100%;
+    margin: auto 10px;
+  }
+  img.countryman {
+    order: 0;
+    max-width: 100%;
+  }
+  #clubman {
+    flex-direction: column;
+    width: 100%;
+  }
+  div.clubman.text {
+    max-width: 100%;
+    margin: auto 10px;
+  }
+  img.clubman {
+    order: 0;
+    max-width: 100%;
+  }
 }
 
 /* Desktops and laptops ----------- */
