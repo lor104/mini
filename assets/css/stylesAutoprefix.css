@@ -105,25 +105,39 @@ div.countryman.text, div.clubman.text {
   margin-right: 10px;
 }
 div.countryman.text {
-  order: -1;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 img.countryman, img.clubman {
   max-width: 50%;
   max-height: 100%;
 }
 img.countryman {
-  order: 0;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
 }
 
 
 /*styles for video section*/
 div#embeddedVideo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: auto;
-  align-items: center;
-  align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 
   margin-top: 25px;
   position: relative;
@@ -133,7 +147,9 @@ div#embeddedVideo {
   max-width: 100vw;
 }
 iframe {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   z-index: -1;
   padding: 0;
   width: 800px;
@@ -143,14 +159,26 @@ iframe {
   width: 90px;
   position: absolute;
   top: calc(224px - 45px);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
   transition: transform 0.5s;
-  transform-origin: center;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
   z-index: 10;
 }
 #playVideo:hover {
   cursor: pointer;
-  transform: scale(1.2) rotate(360deg);
+  -webkit-transform: scale(1.2) rotate(360deg);
+      -ms-transform: scale(1.2) rotate(360deg);
+          transform: scale(1.2) rotate(360deg);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 #videoCover {
   position: absolute;
@@ -172,8 +200,12 @@ iframe {
 
 /*styles for ads at the bottom (JSON DATA)*/
 #containerAds {
-  flex-direction: row;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 50px;
 }
 a.details, a.testDrive {
@@ -210,30 +242,45 @@ div.details p.Interior {
 @media only screen and (max-width : 767px) {
   /* Styles */
     #containerAds {
-      flex-direction: column;
-      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       margin: 10px;
     }
     div#ad0, div#ad1 {
       margin: 10px;
     }
     #countryman {
-      flex-direction: column-reverse;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
       width: 100%;
     }
     #clubman {
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       width: 100%;
     }
     div.countryman.text {
-      order: -1;
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
     }
     div.clubman.text, div.countryman.text {
       max-width: 100%;
       margin: auto 10px;
     }
     img.countryman, img.clubman {
-      order: 0;
+      -webkit-box-ordinal-group: 1;
+          -ms-flex-order: 0;
+              order: 0;
       max-width: 100%;
     }
     .countryman.links a, .clubman.links a {
@@ -281,19 +328,29 @@ div.details p.Interior {
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
   /* Styles */
   #countryman {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     width: 100%;
   }
   div.countryman.text {
-    order: -1;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
   img.countryman, img.clubman {
-    order: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
     max-width: 100%;
     height: 500px;
   }
   #clubman {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
   }
   div.clubman.text, div.countryman.text {
