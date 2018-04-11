@@ -26,6 +26,8 @@ $(document).ready(function(){
     videoCover.style.transition += "opacity 1.4s";
     videoCover.style.opacity = "0";
     setTimeout(function(){videoCover.style.display = "none"},1400);
+
+    setTimeout(function(){video[0].style.zIndex = "100"},1400);
   })
 
 
@@ -144,43 +146,43 @@ $(document).ready(function(){
           else if (keys[n] === "Retailer") {
             var elementClass = `.cars${i}.${keys[n]}`
             var containerName = document.querySelector(elementClass)
-            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+            containerName.innerHTML += `${keys[n]}: <span>${cars[i][keys[n]]}</span>`;
           }
 
           else if (keys[n] === "Kilometres") {
             var elementClass = `.cars${i}.${keys[n]}`
             var containerName = document.querySelector(elementClass)
-            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+            containerName.innerHTML += `${keys[n]}: <span>${cars[i][keys[n]]}</span>`;
           }
 
           else if (keys[n] === "Transmission") {
             var elementClass = `.cars${i}.${keys[n]}`
             var containerName = document.querySelector(elementClass)
-            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+            containerName.innerHTML += `${keys[n]}: <span>${cars[i][keys[n]]}</span>`;
           }
 
           else if (keys[n] === "Exterior") {
             var elementClass = `.cars${i}.${keys[n]}`
             var containerName = document.querySelector(elementClass)
-            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+            containerName.innerHTML += `${keys[n]}: <span>${cars[i][keys[n]]}</span>`;
           }
 
           else if (keys[n] === "Interior") {
             var elementClass = `.cars${i}.${keys[n]}`
             var containerName = document.querySelector(elementClass)
-            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+            containerName.innerHTML += `${keys[n]}: <span>${cars[i][keys[n]]}</span>`;
           }
 
           else if (keys[n] === "VIN") {
             var elementClass = `.cars${i}.${keys[n]}`
             var containerName = document.querySelector(elementClass)
-            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+            containerName.innerHTML += `${keys[n]}: <span>${cars[i][keys[n]]}</span>`;
           }
 
           else if (keys[n] === "DriveTrain") {
             var elementClass = `.cars${i}.${keys[n]}`
             var containerName = document.querySelector(elementClass)
-            containerName.innerHTML += `<span>${keys[n]}:</span> ${cars[i][keys[n]]}`;
+            containerName.innerHTML += `${keys[n]}: <span>${cars[i][keys[n]]}</span>`;
           }
 
           //check to see the key/value pairs iterate properly
